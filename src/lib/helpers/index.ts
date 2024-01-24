@@ -1,4 +1,4 @@
-import type { HourseParserT, EventParamsT } from 'src/types'
+import type { HourseParserT, EventResponseT } from 'src/types'
 
 export const hourseParser = (params: HourseParserT) => {
   const splitedStart = params.start.split(':')
@@ -19,7 +19,7 @@ export const hourseParser = (params: HourseParserT) => {
 export const didCanAdd = (
   start: number,
   duration: number,
-  data: EventParamsT[],
+  data: EventResponseT[],
 ): boolean => {
   const params = data
     .map(item => ({ ...item, crosses: [] as string[], spacing: 0 }))
