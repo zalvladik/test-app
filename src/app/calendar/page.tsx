@@ -12,7 +12,7 @@ import { useCalendarPage } from 'src/app/calendar/useCalendarPage'
 
 import styles from 'src/app/calendar/styles.module.scss'
 
-export const CalendarPage = (): JSX.Element => {
+const Page = (): JSX.Element => {
   const { eventPosition, calendarId, dispatch } = useCalendarPage()
 
   if (!calendarId) {
@@ -40,4 +40,4 @@ export const CalendarPage = (): JSX.Element => {
   )
 }
 
-export default CalendarPage
+export default Page

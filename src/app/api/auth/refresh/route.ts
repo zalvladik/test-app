@@ -9,7 +9,7 @@ import { UserModel } from 'src/lib/models/user'
 
 import { connectDbPromise } from 'src/lib/mongo'
 
-const SECRET_KEY = '}.2oe2k>66PjUP8{sN)0kuaSk:QpYa'
+const KEY = process.env.SECRET_KEY
 
 export async function GET(req: NextRequest) {
   const token = req.headers?.get('authorization')?.split('Bearer ')[1]
@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const { id } = jwt.verify(token, SECRET_KEY) as JwtPayload
+    const { id } = jwt.verify(token, KEY!) as JwtPayload
     const user = await UserModel.findById(id)
 
     if (!user) {

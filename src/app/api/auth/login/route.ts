@@ -8,7 +8,7 @@ import jwt from 'jsonwebtoken'
 import { UserModel } from 'src/lib/models/user'
 import { connectDbPromise } from 'src/lib/mongo'
 
-const SECRET_KEY = '}.2oe2k>66PjUP8{sN)0kuaSk:QpYa'
+const KEY = process.env.SECRET_KEY
 
 export async function PUT(req: NextRequest) {
   const { userName, password } = await req.json()
@@ -30,7 +30,7 @@ export async function PUT(req: NextRequest) {
     {
       id: user._id,
     },
-    SECRET_KEY,
+    KEY!,
     { expiresIn: '23h' },
   )
 
