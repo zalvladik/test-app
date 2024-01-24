@@ -1,0 +1,19 @@
+.fragment {
+  @apply relative
+     bg-white 
+     h-calendar-fragment 
+     border-t-2 
+     border-gray-500
+     pl-2
+     font-extralight;
+
+  & > div:nth-child(1) {
+    @apply text-base;
+  }
+
+  & > div:nth-child(2) {
+    @apply absolute
+      top-2/4
+      text-xs;
+  }
+}

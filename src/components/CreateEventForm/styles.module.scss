@@ -1,0 +1,64 @@
+.form_container {
+  @apply flex 
+  relative
+  flex-col 
+  w-96;
+
+  & > {
+    button {
+      @apply mt-10
+      mr-auto 
+      ml-auto
+      rounded-lg
+      bg-green-600
+      w-36;
+      &:hover,
+      &:focus {
+        @apply scale-110
+        transition-transform;
+      }
+    }
+  }
+
+  & .download_icon {
+    @apply absolute
+    right-0
+    top-56;
+
+    &:hover,
+    &:focus {
+      @apply transition-transform
+      scale-125;
+    }
+  }
+}
+
+.input_container {
+  @apply w-96
+  relative;
+
+  & > input {
+    @apply p-2 
+    w-full
+    text-gray-500
+    rounded-lg
+    bg-gray-200
+    text-lg;
+    &:hover,
+    &:focus {
+      @apply scale-105
+      transition-transform;
+    }
+  }
+
+  & > p {
+    @apply text-red-400 
+    text-base
+    absolute
+    -bottom-7;
+  }
+}
+
+.input_container + .input_container {
+  @apply mt-8;
+}

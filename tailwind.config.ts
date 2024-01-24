@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
@@ -8,13 +8,25 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      height: {
+        'calendar-fragment': '150px',
+        calendar: '1390px',
+      },
+      width: {
+        '4/10': '40%',
+      },
+      maxWidth: {
+        calendar: '200px',
+      },
+      borderColor: {
+        event: '#6e9ecf',
+      },
+      backgroundColor: {
+        event: '#e2ecf5',
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss'), require('autoprefixer')],
 }
+
 export default config

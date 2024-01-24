@@ -1,0 +1,42 @@
+.auth_container {
+  @apply absolute
+  w-96
+  top-2/4
+  left-2/4
+  -translate-y-2/4
+  -translate-x-2/4
+  text-center;
+
+  & > h1 {
+    @apply text-5xl;
+  }
+
+  & > div {
+    @apply flex 
+  justify-around 
+  mt-10;
+
+    & > a:hover {
+      @apply text-cyan-300
+    scale-125
+    transition-transform;
+    }
+  }
+}
+
+.loading_title {
+  @apply absolute
+  top-2/4
+  left-2/4
+  -translate-y-2/4
+  -translate-x-2/4;
+}
+
+.error404 {
+  @apply absolute
+  text-6xl
+  top-2/4
+  left-2/4
+  -translate-y-2/4
+  -translate-x-2/4;
+}

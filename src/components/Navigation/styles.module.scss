@@ -1,0 +1,12 @@
+.nav {
+  @apply flex
+  justify-center;
+}
+
+.nav_item + .nav_item {
+  @apply ml-10;
+}
+
+.active {
+  @apply text-cyan-300;
+}

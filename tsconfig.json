@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "useDefineForClassFields": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -15,13 +16,22 @@
     "incremental": true,
     "plugins": [
       {
-        "name": "next"
-      }
+        "name": "next",
+      },
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "src/*": ["src/*"],
+    },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "src",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.scss",
+    "src/**/*.d.ts",
+  ],
+  "exclude": ["node_modules"],
 }

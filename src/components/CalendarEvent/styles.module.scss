@@ -1,0 +1,40 @@
+.event {
+  @apply pl-2 
+    absolute 
+    max-w-calendar
+    w-full
+    text-base
+    border-l-2
+    border-event
+    bg-event
+    whitespace-nowrap
+    overflow-hidden
+    truncate;
+
+  &:hover,
+  &:focus {
+    @apply bg-gray-600
+    border-cyan-300
+    text-cyan-300;
+
+    & > div {
+      @apply bg-red-500 
+      flex
+      absolute 
+      right-1 
+      top-1 
+      p-1
+      rounded-full;
+    }
+  }
+
+  & > div {
+    @apply hidden;
+  }
+}
+
+.isSelect {
+  @apply bg-gray-600
+      border-cyan-300
+      text-cyan-300;
+}

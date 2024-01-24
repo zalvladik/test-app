@@ -1,0 +1,21 @@
+.header {
+  @apply relative;
+
+  & > div {
+    @apply absolute
+    flex
+    top-2/4
+    right-5
+    -translate-y-2/4;
+    & > p {
+      @apply ml-10;
+    }
+
+    & > button {
+      @apply bg-cyan-900
+      pl-5
+      pr-5
+      rounded-xl;
+    }
+  }
+}

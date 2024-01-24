@@ -1,0 +1,11 @@
+.event_container {
+  @apply w-64 
+  h-calendar
+  overflow-hidden
+  relative
+  text-black;
+}
+
+.calendar_section {
+  @apply flex justify-around;
+}
