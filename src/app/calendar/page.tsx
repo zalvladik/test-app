@@ -16,7 +16,7 @@ export const CalendarPage = (): JSX.Element => {
   const { eventPosition, calendarId, dispatch } = useCalendarPage()
 
   if (!calendarId) {
-    redirect(`/`)
+    redirect(`/auth/login`)
   }
 
   useEffect(() => {
