@@ -12,5 +12,4 @@ and wasn't sure if they were allowed. For example, I avoided using "axios"
 
 
 ![изображение](https://github.com/zalvladik/test-app/assets/117291886/91a6c48e-7fff-41bc-8569-d8af8b0bac1d)
-![изображение](https://github.com/zalvladik/test-app/assets/117291886/deffdd4c-29dd-4cbf-b2ba-cabd2cdc144b)
 
