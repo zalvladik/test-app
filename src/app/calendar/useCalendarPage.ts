@@ -73,7 +73,7 @@ export const useCalendarPage = () => {
         }
 
         if (result[i - 1] && result[i - 1].spacing > result[i].spacing) {
-          result[i].spacing = 0
+          result[i].spacing--
         }
       }
 

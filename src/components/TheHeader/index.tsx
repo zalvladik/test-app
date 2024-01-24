@@ -16,21 +16,13 @@ const TheHeader = () => {
   const { userName, userId, isLoading } = useAppSelector(state => state.authReducer)
   const dispatch = useDispatch<AppDispatch>()
 
-  const navItems = [
-    { label: 'Home', href: '/' },
-    {
-      label: 'Calendar',
-      href: '/calendar',
-    },
-  ]
-
   useEffect(() => {
     dispatch(authRefresh())
   }, [dispatch])
 
   return (
     <header className={styles.header}>
-      <Navigation navLinks={navItems} />
+      <Navigation />
       {userName && (
         <div>
           <button

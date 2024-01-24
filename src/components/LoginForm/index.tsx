@@ -4,6 +4,7 @@ import { Controller } from 'react-hook-form'
 import { redirect } from 'next/navigation'
 
 import { useLoginForm } from 'src/components/LoginForm/useLoginForm'
+import { ROUTES } from 'src/lib/routes'
 
 import style from 'src/components/LoginForm/styles.module.scss'
 
@@ -11,7 +12,7 @@ const LoginForm = (): JSX.Element => {
   const { errors, control, userId, isLoading, handleSubmit } = useLoginForm()
 
   if (userId) {
-    redirect(`/calendar`)
+    redirect(ROUTES.CALENDAR)
   }
 
   return (

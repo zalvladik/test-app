@@ -9,6 +9,7 @@ import CreateEventForm from 'src/components/CreateEventForm'
 
 import { getAllEvents } from 'src/redux/services/event-operations'
 import { useCalendarPage } from 'src/app/calendar/useCalendarPage'
+import { ROUTES } from 'src/lib/routes'
 
 import styles from 'src/app/calendar/styles.module.scss'
 
@@ -16,7 +17,7 @@ const Page = (): JSX.Element => {
   const { eventPosition, calendarId, dispatch } = useCalendarPage()
 
   if (!calendarId) {
-    redirect(`/auth/login`)
+    redirect(ROUTES.AUTH_LOGIN)
   }
 
   useEffect(() => {

@@ -1,20 +1,13 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+
+import { useNavigation } from 'src/components/Navigation/useNavigation'
 
 import styles from 'src/components/Navigation/styles.module.scss'
 
-type NavLink = {
-  label: string
-  href: string
-}
-type Props = {
-  navLinks: NavLink[]
-}
-
-const Navigation = ({ navLinks }: Props) => {
-  const pathname = usePathname()
+const Navigation = () => {
+  const { navLinks, pathname } = useNavigation()
 
   return (
     <ul className={styles.nav}>
