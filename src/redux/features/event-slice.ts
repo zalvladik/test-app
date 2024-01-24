@@ -2,7 +2,7 @@
 
 import { createSlice } from '@reduxjs/toolkit'
 
-import type { EventParamsT } from 'src/types'
+import type { EventResponseT } from 'src/types'
 
 import { goodToast, badToast } from 'src/lib/toastify'
 import {
@@ -13,7 +13,7 @@ import {
 
 type State = {
   isLoading: boolean
-  data: EventParamsT[]
+  data: EventResponseT[]
 }
 
 const initialState: State = {

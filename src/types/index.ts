@@ -18,9 +18,16 @@ export type CalendarProps = {
 
 export type EventParamsT = {
   _id: string
-  spacing: number
   start: number
   duration: number
   title: string
   crosses: string[]
+  spacing: number
+}
+
+export type EventResponseT = {
+  _id: string
+  start: number
+  duration: number
+  title: string
 }

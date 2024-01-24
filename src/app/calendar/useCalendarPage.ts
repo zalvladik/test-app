@@ -1,4 +1,4 @@
-import type { EventParamsT } from 'src/types'
+import type { EventResponseT } from 'src/types'
 
 import { useDispatch } from 'react-redux'
 
@@ -9,7 +9,7 @@ export const useCalendarPage = () => {
   const { data } = useAppSelector(state => state.eventReducer)
   const { calendarId } = useAppSelector(state => state.authReducer)
 
-  const eventPositionsFunc = (data: EventParamsT[]): EventParamsT[] => {
+  const eventPositionsFunc = (data: EventResponseT[]): EventResponseT[] => {
     const params = data
       .map(item => ({ ...item, crosses: [] as string[], spacing: 0 }))
       .sort((a, b) => a.start - b.start)
